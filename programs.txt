@@ -1,0 +1,12 @@
+HTML: used for structuring the web page content.
+CSS: used for styling the web page content.
+JavaScript: used for adding dynamic behavior to the web page.
+Node.js: used as the back-end JavaScript runtime environment.
+SQLite: used as the database management system to store the user and menu data.
+JSON: used for data exchange between the client-side and server-side of the web app.
+jQuery: used as a JavaScript library to simplify client-side scripting.
+(VSCode): used as the integrated development environment
+(IDE) to code, debug, and deploy the web app.
+Teams: used for communication and collaboration between project team members.
+WhatsApp: used for real-time messaging and communication
+among project team members.

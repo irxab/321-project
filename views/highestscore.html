@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Tournament</title>
+        <link rel="stylesheet" type="text/css" href="/css/adminhome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/boxicons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg header1">
+            <a href="javascipt:void(0)"></a>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse pt-sm-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item p-0 m-0">
+                            <a class="btn btn-outline-primary active" aria-current="page" href="/guest/home">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <a href="/" class="btn btn-outline-primary text-white">Logout</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <aside>
+                <ul>
+                    <li>
+                        <a href="/allmatches">Browse Tournaments</a>
+                    </li>
+                    <li>
+                        <a href="/highestscore">Top Scorers</a>
+                    </li>
+                    <li>
+                        <a href="/allredcard">Red Cards</a>
+                    </li>
+                    <li>
+                        <a href="/allteammembers">Team Members</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="page-title">High Score</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">Home</li>
+                                        <li class="breadcrumb-item">High Score</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div style="overflow-x:auto; overflow-y:auto; max-height: 300px; text-align:center;">
+                                <table class="table table-striped table-responsive ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Player Name</th>
+                                            <th scope="col">Team Name</th>
+                                            <th scope="col">Goals Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in rows %}
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td class="text-center">{{row.player_name}}</td>
+                                                <td class="text-center">{{row.team_name}}</td>
+                                                <td class="text-center">{{row.goal_score}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+      
+        <footer>
+            <!-- Footer content goes here -->
+        </footer>
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
